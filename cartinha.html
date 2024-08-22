@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Carta de Amor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff6f61; /* Coral vibrante */
+            --secondary-color: #4db6ac; /* Verde água */
+            --accent-color: #ffca28; /* Amarelo vibrante */
+            --background-color: #fce4ec; /* Rosa claro */
+            --text-color: #333; /* Cinza escuro para o texto */
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            background: url('./src/img/header-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            color: white; /* Garantir que o texto é branco para contraste com o fundo escuro do overlay */
+        }
+
+        .letter-content {
+            border: 2px solid var(--primary-color);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .letter-content h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção de Cabeçalho -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="display-3">Uma Carta de Amor</h1>
+            <p class="lead">Uma mensagem especial para você.</p>
+            <a href="index.html" class="btn btn-light btn-lg">Voltar para a Página Principal</a>
+        </div>
+    </header>
+
+    <!-- Seção da Carta -->
+    <section class="my-5">
+        <div class="container">
+            <div class="letter-content">
+                <h2>Querida Ingrid,</h2>
+                <p>Desde o momento em que nossos caminhos se cruzaram, minha vida mudou para melhor. Cada momento que passamos juntos é uma recordação preciosa, um testemunho do amor que temos um pelo outro.</p>
+                <p>Nosso primeiro encontro, as risadas que compartilhamos e as memórias que criamos são partes inestimáveis da nossa história. A forma como você ilumina meu dia e faz cada instante especial é algo que valorizo imensamente.</p>
+                <p>Através dos altos e baixos, você sempre esteve ao meu lado, e por isso sou eternamente grato. Seu amor e apoio significam o mundo para mim, e mal posso esperar para criar ainda mais memórias juntos.</p>
+                <p>Com todo o meu amor,</p>
+                <p>Lucas de Castro Fujitani</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Nossa Jornada de Amor. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

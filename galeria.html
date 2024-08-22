@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Memórias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff6f61; /* Coral vibrante */
+            --secondary-color: #4db6ac; /* Verde água */
+            --accent-color: #ffca28; /* Amarelo vibrante */
+            --background-color: #fce4ec; /* Rosa claro */
+            --text-color: #333; /* Cinza escuro para o texto */
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            background: url('./src/img/header-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .gallery {
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item .overlay .text {
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção de Cabeçalho -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="display-3">Galeria de Memórias</h1>
+            <p class="lead">Reviva os momentos especiais com efeitos visuais.</p>
+            <a href="index.html" class="btn btn-light btn-lg">Voltar para a Página Principal</a>
+        </div>
+    </header>
+
+    <!-- Galeria -->
+    <section class="gallery">
+        <div class="container">
+            <div class="row">
+                <!-- Primeiro Encontro -->
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/bateria.jpg" alt="Primeiro Encontro 1">
+                    <div class="overlay">
+                        <div class="text">Primeiro Encontro</div>
+                    </div>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/divertidamente.jpg" alt="Primeiro Encontro 2">
+                    <div class="overlay">
+                        <div class="text">Primeiro Encontro</div>
+                    </div>
+                </div>
+                <!-- Aniversário de 15 anos -->
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/15 anos foto.jpg" alt="Aniversário de 15 anos">
+                    <div class="overlay">
+                        <div class="text">Aniversário de 15 anos</div>
+                    </div>
+                </div>
+                <!-- Caldeirão Enfeitiçado -->
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/caldeirao1.jpg" alt="Caldeirão Enfeitiçado 1">
+                    <div class="overlay">
+                        <div class="text">Caldeirão Enfeitiçado</div>
+                    </div>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/caldeirao2.jpg" alt="Caldeirão Enfeitiçado 2">
+                    <div class="overlay">
+                        <div class="text">Caldeirão Enfeitiçado</div>
+                    </div>
+                </div>
+                <!-- Primeiro Filho e Começo de Namoro -->
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/rosa.jpg" alt="Monster Rosa">
+                    <div class="overlay">
+                        <div class="text">Primeiro Filho e Começo de Namoro</div>
+                    </div>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/ursinho.jpg" alt="Ursinho">
+                    <div class="overlay">
+                        <div class="text">Primeiro Filho e Começo de Namoro</div>
+                    </div>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/Começo.jpg" alt="Começo de Namoro">
+                    <div class="overlay">
+                        <div class="text">Primeiro Filho e Começo de Namoro</div>
+                    </div>
+                </div>
+                <!-- Piquenique -->
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/piquinique 1.jpg" alt="Piquenique 1">
+                    <div class="overlay">
+                        <div class="text">Piquenique</div>
+                    </div>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/piquinique 2.jpg" alt="Piquenique 2">
+                    <div class="overlay">
+                        <div class="text">Piquenique</div>
+                    </div>
+                </div>
+                <!-- Yakiniku -->
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/yakinmiku.jpg" alt="Yakiniku 1">
+                    <div class="overlay">
+                        <div class="text">Yakiniku</div>
+                    </div>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="./src/img/mesverssario.jpg" alt="Yakiniku 2">
+                    <div class="overlay">
+                        <div class="text">Yakiniku</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Nossa Jornada de Amor. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

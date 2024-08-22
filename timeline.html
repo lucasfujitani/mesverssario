@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha do Tempo - Nossa Jornada de Amor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff6f61; /* Coral vibrante */
+            --secondary-color: #4db6ac; /* Verde água */
+            --accent-color: #ffca28; /* Amarelo vibrante */
+            --background-color: #fce4ec; /* Rosa claro */
+            --text-color: #333; /* Cinza escuro para o texto */
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            background: url('./src/img/header-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-item {
+            border-left: 2px solid var(--primary-color);
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .timeline-content {
+            position: relative;
+        }
+
+        .timeline-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .carousel-item img, .carousel-item video {
+            height: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-top: 10px;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção de Cabeçalho -->
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="display-3">Linha do Tempo</h1>
+            <p class="lead">Veja os momentos importantes da nossa jornada de amor.</p>
+            <a href="index.html" class="btn btn-light btn-lg">Voltar para a Página Principal</a>
+        </div>
+    </header>
+
+    <!-- Linha do Tempo -->
+    <section class="my-5">
+        <div class="container">
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Primeiro Encontro</h4>
+                        <p class="card-text">Nos conhecemos pessoalmente no boulevard, evento de bateria e depois fomos assistir Diverti damente 2</p>
+                        <div id="carouselFirstDate" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/bateria.jpg" class="d-block w-100" alt="Primeiro Encontro 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/divertidamente.jpg" class="d-block w-100" alt="Primeiro Encontro 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFirstDate" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFirstDate" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">7 de Julho de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Aniversário de 15 anos</h4>
+                        <p class="card-text">Fomos ao aniversário de 15 anos, bebemos muito "suco de fini"</p>
+                        <div id="carouselFifteenYears" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <video controls>
+                                        <source src="./src/img/15 anos.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/15 anos foto.jpg" class="d-block w-100" alt="Aniversário de 15 anos 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFifteenYears" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFifteenYears" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">13 de Julho de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Caldeirão Enfeitiçado</h4>
+                        <p class="card-text">Fomos ao caldeirão enfeitiçado, bebemos poções e comemos lanche</p>
+                        <div id="carouselCauldron" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/caldeirao1.jpg" class="d-block w-100" alt="Caldeirão Enfeitiçado 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/caldeirao2.jpg" class="d-block w-100" alt="Caldeirão Enfeitiçado 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCauldron" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCauldron" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">19 de Julho de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Primeiro Filho, e o mais importante: COMEÇO DE NAMORO</h4>
+                        <p class="card-text">Fomos ao shopping, pegamos um ursinho e NAMORO!!!</p>
+                        <div id="carouselFirstChild" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/rosa.jpg" class="d-block w-100" alt="Monster Rosa">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/ursinho.jpg" class="d-block w-100" alt="Ursinho">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/Começo.jpg" class="d-block w-100" alt="Começo de Namoro">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFirstChild" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFirstChild" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">24 de Julho de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Piquenique</h4>
+                        <p class="card-text">Fomos ao igapo, piquenique e arte (DENGUE?)</p>
+                        <div id="carouselPicnic" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <video controls>
+                                        <source src="./src/img/piquinique video.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/piquinique 1.jpg" class="d-block w-100" alt="Piquenique 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/piquinique 2.jpg" class="d-block w-100" alt="Piquenique 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPicnic" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPicnic" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">27 de Julho de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Yakiniku</h4>
+                        <p class="card-text">Fomos ao Yakiniku, porém só você conseguiu aproveitar a comida hahaha</p>
+                        <div id="carouselYakiniku" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/yakinmiku.jpg" class="d-block w-100" alt="Yakiniku 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/mesverssario.jpg" class="d-block w-100" alt="Yakiniku 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselYakiniku" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselYakiniku" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">31 de Julho de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Outback</h4>
+                        <p class="card-text">A ideia era ir no outback, mas minha fome e ansiedade, fez a gente ir na gelobel</p>
+                        <div id="carouselYakiniku" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/outback.jpg" class="d-block w-100" alt="Yakiniku 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-date">9 de Agosto de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Coraline</h4>
+                        <p class="card-text">Fomos assistir coralina</p>
+                        <div id="carouselYakiniku" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/Coralina.jpg" class="d-block w-100" alt="Yakiniku 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-date">15 de Agosto de 2024</div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 class="card-title">Geekday</h4>
+                        <p class="card-text">Fomos ao evente de anime Geekday</p>
+                        <div id="geekday" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./src/img/g1.jpg" class="d-block w-100" alt="Yakiniku 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/g2.jpg" class="d-block w-100" alt="Yakiniku 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/g3.jpg" class="d-block w-100" alt="Yakiniku 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./src/img/g4.jpg" class="d-block w-100" alt="Yakiniku 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#geekday" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#geekday" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="timeline-date">16/17 de Agosto de 2024</div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center">
+        <p>&copy; 2024 Nossa Jornada de Amor. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
